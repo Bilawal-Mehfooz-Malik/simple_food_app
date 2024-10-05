@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_food_app/auth/login_or_signup.dart';
+import 'package:simple_food_app/features/auth/presentation/login_screen.dart';
 import 'package:simple_food_app/models/restaurant.dart';
+import 'package:simple_food_app/themes/dark_mode.dart';
 import 'package:simple_food_app/themes/theme_provider.dart';
+import 'package:simple_food_app/utils/string_hardcoded.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,10 +25,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple Food App',
+      title: 'Simple Food App'.hardcoded,
       debugShowCheckedModeBanner: false,
-      theme: Provider.of<ThemeProvider>(context).themeData,
-      home: const LoginOrSignup(),
+      theme: darkMode,
+      // theme: Provider.of<ThemeProvider>(context).themeData,
+      home: const LoginScreen(),
     );
   }
 }

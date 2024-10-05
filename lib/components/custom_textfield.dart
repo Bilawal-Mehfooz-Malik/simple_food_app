@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simple_food_app/components/border.dart';
+import 'package:simple_food_app/utils/extensions.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -13,25 +15,15 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: TextField(
-        controller: controller,
-        obscureText: obscureText,
-        decoration: InputDecoration(
-          hintText: hintText,
-          enabledBorder: _border(style.colorScheme.tertiary),
-          focusedBorder: _border(style.colorScheme.primary),
-          hintStyle: TextStyle(color: style.colorScheme.primary),
-        ),
+    return TextField(
+      controller: controller,
+      obscureText: obscureText,
+      decoration: InputDecoration(
+        hintText: hintText,
+        enabledBorder: border(context.color.secondary),
+        focusedBorder: border(context.color.primary),
+        hintStyle: TextStyle(color: context.color.onSecondary),
       ),
-    );
-  }
-
-  OutlineInputBorder _border(Color color) {
-    return OutlineInputBorder(
-      borderSide: BorderSide(color: color),
     );
   }
 }

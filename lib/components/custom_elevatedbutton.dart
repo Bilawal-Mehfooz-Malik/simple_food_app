@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:simple_food_app/utils/extensions.dart';
+import 'package:simple_food_app/components/border.dart';
+import 'package:simple_food_app/components/app_sizes.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String text;
@@ -15,20 +18,16 @@ class CustomElevatedButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(16),
-        margin: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.all(Sizes.p12),
         decoration: BoxDecoration(
-          color: style.colorScheme.secondary,
-          borderRadius: BorderRadius.circular(6),
+          borderRadius: borderRadius,
+          color: style.colorScheme.primary,
         ),
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: style.colorScheme.inversePrimary,
-            ),
+            style: context.txtTheme.titleMedium!
+                .copyWith(color: context.color.onPrimary),
           ),
         ),
       ),
