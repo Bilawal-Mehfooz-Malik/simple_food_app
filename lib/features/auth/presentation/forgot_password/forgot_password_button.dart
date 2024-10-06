@@ -40,7 +40,7 @@ class ForgotPasswordButton extends StatelessWidget {
             builder: (_, ref, __) {
               final content = ref.watch(forgotContentControllerProvider);
 
-              return content == false
+              return content == ForgotContent.resetPassword
                   ? ResetPassword(emailController: emailController)
                   : const EmailSent();
             },

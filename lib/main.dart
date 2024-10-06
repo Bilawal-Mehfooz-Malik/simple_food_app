@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_food_app/features/auth/presentation/login/login_screen.dart';
+import 'package:simple_food_app/features/auth/presentation/login_screen.dart';
 import 'package:simple_food_app/models/restaurant.dart';
 import 'package:simple_food_app/themes/dark_mode.dart';
 import 'package:simple_food_app/themes/theme_provider.dart';

@@ -26,6 +26,9 @@ class ResponsiveCenter extends StatelessWidget {
     return Center(
       child: LayoutBuilder(builder: (context, constraints) {
         return Container(
+          margin: showBorder && constraints.maxWidth >= maxContentWidth
+              ? const EdgeInsets.all(Sizes.p4)
+              : null,
           decoration: showBorder && constraints.maxWidth >= maxContentWidth
               ? BoxDecoration(
                   border: Border.all(color: context.color.secondary),

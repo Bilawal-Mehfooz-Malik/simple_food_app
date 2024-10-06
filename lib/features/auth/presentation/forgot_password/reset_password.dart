@@ -5,6 +5,7 @@ import 'package:simple_food_app/components/custom_textfield.dart';
 import 'package:simple_food_app/features/auth/presentation/forgot_password/forgot_content_controller.dart';
 import 'package:simple_food_app/utils/extensions.dart';
 import 'package:simple_food_app/utils/string_hardcoded.dart';
+import 'package:simple_food_app/utils/validators.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key, required this.emailController});
@@ -35,6 +36,7 @@ class ResetPassword extends StatelessWidget {
         CustomTextField(
           hintText: 'Email Address'.hardcoded,
           controller: emailController,
+          validator: Validators.validateEmail,
         ),
         gapH24,
 
