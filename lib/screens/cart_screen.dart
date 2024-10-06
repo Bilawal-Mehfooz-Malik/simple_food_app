@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_food_app/models/restaurant.dart';
 import 'package:simple_food_app/components/my_cart_tile.dart';
-import 'package:simple_food_app/components/custom_elevatedbutton.dart';
 import 'package:simple_food_app/screens/payment_screen.dart';
 
 class CartScreen extends StatelessWidget {
@@ -54,9 +53,9 @@ class CartScreen extends StatelessWidget {
               ),
 
               // go to checkout page
-              CustomElevatedButton(
-                  text: 'Go to checkout',
-                  onTap: () {
+              ElevatedButton(
+                  child: const Text('Go to checkout'),
+                  onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const PaymentScreen(),
                     ));

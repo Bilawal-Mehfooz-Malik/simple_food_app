@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_food_app/components/app_sizes.dart';
-import 'package:simple_food_app/components/custom_elevatedbutton.dart';
-import 'package:simple_food_app/features/auth/presentation/login_screen.dart';
-import 'package:simple_food_app/features/auth/presentation/signup_screen.dart';
-import 'package:simple_food_app/features/auth/presentation/widgets/bottom_toggle_button.dart';
+import 'package:simple_food_app/features/auth/presentation/login/login_screen.dart';
+import 'package:simple_food_app/features/auth/presentation/signup/signup_screen.dart';
+import 'package:simple_food_app/features/auth/presentation/common/bottom_toggle_button.dart';
 
 class ButtonsSection extends StatelessWidget {
   const ButtonsSection({
@@ -22,10 +21,7 @@ class ButtonsSection extends StatelessWidget {
     return Column(
       children: [
         //* Log In Button
-        CustomElevatedButton(
-          text: loginOrSignup,
-          onTap: () {},
-        ),
+        ElevatedButton(onPressed: () {}, child: Text(loginOrSignup)),
         gapH16,
 
         //* Not a member? register now

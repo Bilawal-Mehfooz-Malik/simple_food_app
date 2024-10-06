@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_food_app/models/food.dart';
 import 'package:simple_food_app/models/restaurant.dart';
-import 'package:simple_food_app/components/custom_elevatedbutton.dart';
 
 class FoodScreen extends StatefulWidget {
   final Food food;
@@ -117,9 +116,9 @@ class _FoodScreenState extends State<FoodScreen> {
                 ),
 
                 // button
-                CustomElevatedButton(
-                    text: 'Add to cart',
-                    onTap: () =>
+                ElevatedButton(
+                    child: const Text('Add to cart'),
+                    onPressed: () =>
                         _addToCart(widget.food, widget.selectedAddons)),
                 const SizedBox(height: 24),
               ],

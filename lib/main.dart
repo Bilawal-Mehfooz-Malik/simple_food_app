@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_food_app/features/auth/presentation/login_screen.dart';
+import 'package:simple_food_app/features/auth/presentation/login/login_screen.dart';
 import 'package:simple_food_app/models/restaurant.dart';
 import 'package:simple_food_app/themes/dark_mode.dart';
 import 'package:simple_food_app/themes/theme_provider.dart';
 import 'package:simple_food_app/utils/string_hardcoded.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart' as riverpod;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,7 @@ void main() async {
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
         ChangeNotifierProvider(create: (context) => Restaurant()),
       ],
-      child: const MyApp(),
+      child: const riverpod.ProviderScope(child: MyApp()),
     ),
   );
 }

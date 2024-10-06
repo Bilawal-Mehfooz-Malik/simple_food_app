@@ -16,16 +16,22 @@ class BottomToggleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var style =
-        context.txtTheme.titleSmall!.copyWith(color: context.color.primary);
+    var style = context.txtTheme.titleSmall!.copyWith(
+      color: context.color.primary,
+      fontWeight: FontWeight.bold,
+    );
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(firstText, style: TextStyle(color: context.color.onSurface)),
-        gapW4,
-        InkWell(onTap: onTap, child: Text(secondText, style: style)),
-      ],
+    return InkWell(
+      onTap: onTap,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(firstText, style: TextStyle(color: context.color.onSurface)),
+          gapW4,
+          Text(secondText, style: style),
+        ],
+      ),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:simple_food_app/components/custom_elevatedbutton.dart';
 import 'package:simple_food_app/screens/delivery_progress_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -57,7 +56,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ),
 
           const SizedBox(height: 24),
-          CustomElevatedButton(text: 'Pay now', onTap: _payMethod),
+          ElevatedButton(onPressed: _payMethod, child: const Text('Pay now')),
           const SizedBox(height: 16),
         ],
       ),

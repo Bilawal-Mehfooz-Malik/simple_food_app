@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_food_app/components/border.dart';
+import 'package:simple_food_app/components/app_sizes.dart';
 import 'package:simple_food_app/utils/extensions.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -20,10 +20,17 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         hintText: hintText,
-        enabledBorder: border(context.color.secondary),
-        focusedBorder: border(context.color.primary),
+        enabledBorder: _border(context.color.onSecondary),
+        focusedBorder: _border(context.color.primary),
         hintStyle: TextStyle(color: context.color.onSecondary),
       ),
+    );
+  }
+
+  OutlineInputBorder _border(Color color) {
+    return OutlineInputBorder(
+      borderSide: BorderSide(color: color),
+      borderRadius: BorderRadius.circular(Sizes.p8),
     );
   }
 }
