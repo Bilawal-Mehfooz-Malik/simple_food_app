@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_food_app/components/app_sizes.dart';
 import 'package:simple_food_app/utils/extensions.dart';
+import 'package:simple_food_app/components/app_sizes.dart';
 
 class AuthHeader extends StatelessWidget {
   final String headline;

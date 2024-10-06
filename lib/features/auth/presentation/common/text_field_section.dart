@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:simple_food_app/utils/validators.dart';
 import 'package:simple_food_app/components/app_sizes.dart';
 import 'package:simple_food_app/utils/string_hardcoded.dart';
 import 'package:simple_food_app/components/custom_textfield.dart';
-import 'package:simple_food_app/utils/validators.dart';
 
 class TextFieldSection extends StatelessWidget {
   const TextFieldSection({

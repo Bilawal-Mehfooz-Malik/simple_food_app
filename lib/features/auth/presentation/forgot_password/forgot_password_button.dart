@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:simple_food_app/features/auth/presentation/forgot_password/email_sent.dart';
-import 'package:simple_food_app/features/auth/presentation/forgot_password/forgot_content_controller.dart';
 import 'package:simple_food_app/utils/extensions.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_food_app/components/app_sizes.dart';
 import 'package:simple_food_app/utils/string_hardcoded.dart';
+import 'package:simple_food_app/features/auth/presentation/forgot_password/email_sent.dart';
 import 'package:simple_food_app/features/auth/presentation/forgot_password/reset_password.dart';
+import 'package:simple_food_app/features/auth/presentation/forgot_password/forgot_content_controller.dart';
 
 class ForgotPasswordButton extends StatelessWidget {
   final TextEditingController emailController;

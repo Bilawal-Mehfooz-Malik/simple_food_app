@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_food_app/components/app_sizes.dart';
 import 'package:simple_food_app/utils/extensions.dart';
+import 'package:simple_food_app/components/app_sizes.dart';
 
 class BottomToggleButton extends StatelessWidget {
   const BottomToggleButton({
@@ -23,14 +23,18 @@ class BottomToggleButton extends StatelessWidget {
 
     return InkWell(
       onTap: onTap,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(firstText, style: TextStyle(color: context.color.onSurface)),
-          gapW4,
-          Text(secondText, style: style),
-        ],
+      borderRadius: BorderRadius.circular(Sizes.p8),
+      child: Padding(
+        padding: const EdgeInsets.all(Sizes.p12),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(firstText, style: TextStyle(color: context.color.onSurface)),
+            gapW4,
+            Text(secondText, style: style),
+          ],
+        ),
       ),
     );
   }

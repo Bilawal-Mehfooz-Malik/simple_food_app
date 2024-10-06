@@ -6,81 +6,87 @@ const _shape = RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(Sizes.p8)));
 
 final darkMode = ThemeData(
-  useMaterial3: true,
-  brightness: Brightness.dark,
-  scaffoldBackgroundColor: darkSurfaceColor,
-
-  // [Color Scheme]
-  colorScheme: const ColorScheme(
+    useMaterial3: true,
     brightness: Brightness.dark,
-    primary: darkPrimaryColor,
-    onPrimary: darkOnPrimaryColor,
-    secondary: darkSecondaryColor,
-    onSecondary: darkOnSecondaryColor,
-    error: darkErrorColor,
-    onError: darkOnErrorColor,
-    surface: darkSurfaceColor,
-    onSurface: darkOnSurfaceColor,
-  ),
+    scaffoldBackgroundColor: darkSurfaceColor,
 
-  // [Elevate Button Theme]
-  elevatedButtonTheme: const ElevatedButtonThemeData(
-    style: ButtonStyle(
-      shape: WidgetStatePropertyAll(_shape),
-      backgroundColor: WidgetStatePropertyAll(darkPrimaryColor),
-      foregroundColor: WidgetStatePropertyAll(darkOnPrimaryColor),
-      minimumSize: WidgetStatePropertyAll(Size(double.infinity, 44)),
-      textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 16)),
+    // [Color Scheme]
+    colorScheme: const ColorScheme(
+      brightness: Brightness.dark,
+      primary: darkPrimaryColor,
+      onPrimary: darkOnPrimaryColor,
+      secondary: darkSecondaryColor,
+      onSecondary: darkOnSecondaryColor,
+      error: darkErrorColor,
+      onError: darkOnErrorColor,
+      surface: darkSurfaceColor,
+      onSurface: darkOnSurfaceColor,
     ),
-  ),
 
-  // // [Text Button Theme]
-  textButtonTheme: const TextButtonThemeData(
-    style: ButtonStyle(
-      foregroundColor: WidgetStatePropertyAll(darkOnPrimaryColor),
-      minimumSize: WidgetStatePropertyAll(Size(double.infinity, 44)),
-      textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 16)),
+    // [Elevate Button Theme]
+    elevatedButtonTheme: const ElevatedButtonThemeData(
+      style: ButtonStyle(
+        shape: WidgetStatePropertyAll(_shape),
+        backgroundColor: WidgetStatePropertyAll(darkPrimaryColor),
+        foregroundColor: WidgetStatePropertyAll(darkOnPrimaryColor),
+        minimumSize: WidgetStatePropertyAll(Size(double.infinity, 44)),
+        textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 16)),
+      ),
     ),
-  ),
 
-  // [List Tile Theme]
-  // listTileTheme: const ListTileThemeData(
-  //   tileColor: darkSecondaryColor,
-  //   titleTextStyle: TextStyle(
-  //     color: darkOnSurfaceColor,
-  //     fontWeight: FontWeight.normal,
-  //     decorationThickness: 2,
-  //   ),
-  //   subtitleTextStyle: TextStyle(color: darkOnSecondaryColor),
-  //   shape: _shape,
-  // ),
+    // // [Text Button Theme]
+    textButtonTheme: const TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: WidgetStatePropertyAll(darkOnPrimaryColor),
+        minimumSize: WidgetStatePropertyAll(Size(double.infinity, 44)),
+        textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 16)),
+      ),
+    ),
 
-  // // [Check Box Theme]
-  // checkboxTheme: const CheckboxThemeData(shape: CircleBorder()),
+    // [List Tile Theme]
+    // listTileTheme: const ListTileThemeData(
+    //   tileColor: darkSecondaryColor,
+    //   titleTextStyle: TextStyle(
+    //     color: darkOnSurfaceColor,
+    //     fontWeight: FontWeight.normal,
+    //     decorationThickness: 2,
+    //   ),
+    //   subtitleTextStyle: TextStyle(color: darkOnSecondaryColor),
+    //   shape: _shape,
+    // ),
 
-  // [Dialog theme]
-  // dialogTheme: const DialogTheme(
-  //   shape: _shape,
-  //   backgroundColor: darkSecondaryColor,
-  //   contentTextStyle: TextStyle(color: darkOnSecondaryColor),
-  // ),
+    // // [Check Box Theme]
+    // checkboxTheme: const CheckboxThemeData(shape: CircleBorder()),
 
-  bottomSheetTheme: const BottomSheetThemeData(
-    shape: _shape,
-    backgroundColor: darkSecondaryColor,
-  ),
+    // [Dialog theme]
+    // dialogTheme: const DialogTheme(
+    //   shape: _shape,
+    //   backgroundColor: darkSecondaryColor,
+    //   contentTextStyle: TextStyle(color: darkOnSecondaryColor),
+    // ),
 
-  // // [Date Picker Theme]
-  // datePickerTheme:
-  //     const DatePickerThemeData(backgroundColor: darkSecondaryColor),
+    bottomSheetTheme: const BottomSheetThemeData(
+      shape: _shape,
+      backgroundColor: darkSecondaryColor,
+    ),
+    scrollbarTheme: const ScrollbarThemeData(
+      radius: Radius.circular(Sizes.p8),
+      thumbColor: WidgetStatePropertyAll(darkOnSecondaryColor),
+      crossAxisMargin: 2,
+      mainAxisMargin: 4,
+    )
 
-  // // [Icon Button Theme]
-  // iconButtonTheme: const IconButtonThemeData(
-  //   style: ButtonStyle(
-  //     padding: WidgetStatePropertyAll(EdgeInsets.zero),
-  //   ),
-  // ),
+    // // [Date Picker Theme]
+    // datePickerTheme:
+    //     const DatePickerThemeData(backgroundColor: darkSecondaryColor),
 
-  // // [Card Theme]
-  // cardTheme: const CardTheme(color: darkSecondaryColor, shape: _shape),
-);
+    // // [Icon Button Theme]
+    // iconButtonTheme: const IconButtonThemeData(
+    //   style: ButtonStyle(
+    //     padding: WidgetStatePropertyAll(EdgeInsets.zero),
+    //   ),
+    // ),
+
+    // // [Card Theme]
+    // cardTheme: const CardTheme(color: darkSecondaryColor, shape: _shape),
+    );
