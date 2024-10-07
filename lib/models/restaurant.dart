@@ -2,11 +2,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_food_app/models/cart_item.dart';
-import 'package:simple_food_app/models/food.dart';
+import 'package:simple_food_app/features/products/model/food.dart';
 
 class Restaurant extends ChangeNotifier {
   //list of food menu
-  final List<Food> _menu = [
+  final List<Food> _menu = const [
     // burgers
     Food(
       name: 'Classic Cheese burger',

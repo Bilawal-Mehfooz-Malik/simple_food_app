@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_food_app/models/food.dart';
+import 'package:simple_food_app/features/products/model/food.dart';
 import 'package:simple_food_app/models/restaurant.dart';
 
 class FoodScreen extends StatefulWidget {

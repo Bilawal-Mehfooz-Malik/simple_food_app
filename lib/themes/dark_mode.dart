@@ -40,6 +40,7 @@ final darkMode = ThemeData(
         foregroundColor: WidgetStatePropertyAll(darkOnPrimaryColor),
         minimumSize: WidgetStatePropertyAll(Size(double.infinity, 44)),
         textStyle: WidgetStatePropertyAll(TextStyle(fontSize: 16)),
+        shape: WidgetStatePropertyAll(_shape),
       ),
     ),
 

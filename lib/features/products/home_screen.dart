@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:simple_food_app/models/food.dart';
+import 'package:simple_food_app/features/products/model/food.dart';
 import 'package:simple_food_app/models/restaurant.dart';
 import 'package:simple_food_app/screens/food_screen.dart';
 import 'package:simple_food_app/components/my_food_tile.dart';
-import 'package:simple_food_app/components/custom_tab_bar.dart';
-import 'package:simple_food_app/components/my_current_location.dart';
-import 'package:simple_food_app/components/my_description_box.dart';
+import 'package:simple_food_app/features/products/custom_tab_bar.dart';
+import 'package:simple_food_app/features/products/my_current_location.dart';
+import 'package:simple_food_app/features/products/my_description_box.dart';
 import 'package:simple_food_app/components/custom_silver_appbar.dart';
 import 'package:simple_food_app/components/custom_drawer/custom_drawer.dart';
 
@@ -19,7 +19,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
-  // tab controller
   late TabController _tabController;
 
   @override

@@ -87,7 +87,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   void _signup() {
     if (_formKey.currentState!.validate()) {
-      // add login logic
+      // TODO: add signup logic
     }
   }
 }
